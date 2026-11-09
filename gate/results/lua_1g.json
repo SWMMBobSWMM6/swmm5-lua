@@ -1,0 +1,20 @@
+[
+ {
+  "id": "fcdbc4886a73",
+  "path": "/home/claude/swmmbobswmm6/1729-swmm5-models-2030/EPA/72_H&H_Elements(2).inp",
+  "status": "PASS",
+  "sec": 1318.355,
+  "rc": 0,
+  "first_rpt_diff": null,
+  "stderr": ""
+ },
+ {
+  "id": "77e00bc268b0",
+  "path": "/home/claude/swmmbobswmm6/1729-swmm5-models-2030/Hydrology/SCANLON.inp",
+  "status": "PASS",
+  "sec": 863.375,
+  "rc": 0,
+  "first_rpt_diff": null,
+  "stderr": ""
+ }
+]

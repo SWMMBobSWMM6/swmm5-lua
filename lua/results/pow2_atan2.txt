@@ -1,0 +1,22 @@
+# lua/test/pow2_atan2.c (C, glibc 2.39), then the same arguments in lupa's Lua 5.4.8
+pow(-0x1.413019a6be445p-3,2)=0x1.92f9a95dca40ap-6  x*x=0x1.92f9a95dca40bp-6
+pow(0x1.147f2b1ca3ce6p+50,2)=0x1.2aa274218ee23p+100  x*x=0x1.2aa274218ee22p+100
+pow(0x1.ca64cad798b28p+455,2)=0x1.9a6666bd43c38p+911  x*x=0x1.9a6666bd43c37p+911
+pow(-0x1.40d7ca69d96aap-398,2)=0x1.921c2fee3d61p-796  x*x=0x1.921c2fee3d60fp-796
+pow(0x1.52c592617c7f4p-311,2)=0x1.c04e4f040a7dp-622  x*x=0x1.c04e4f040a7cfp-622
+atan(-0x1.7646033488cefp-4)=-0x1.753caceec8a1bp-4 atan2(x,1)=-0x1.753caceec8a1ap-4
+atan(-0x1.b896936efd04p-4)=-0x1.b6e6901eee581p-4 atan2(x,1)=-0x1.b6e6901eee58p-4
+atan(0x1.37b8b32a0e9ebp-4)=0x1.371f2b7809b09p-4 atan2(x,1)=0x1.371f2b7809b08p-4
+atan(-0x1.bc0106ba54b56p-3)=-0x1.b53ccd7ff1551p-3 atan2(x,1)=-0x1.b53ccd7ff155p-3
+atan(0x1.47cb5e7ee243ep-4)=0x1.4718e8ef211e9p-4 atan2(x,1)=0x1.4718e8ef211eap-4
+20000000 args: pow(x,2) != x*x in 12953; atan(x) != atan2(x,1) in 539
+Lua 5.4.8: -0x1.413019a6be445p-3 ^ 2.0 = 0x1.92f9a95dca40bp-6, x * x = 0x1.92f9a95dca40bp-6, glibc pow = 0x1.92f9a95dca40ap-6
+Lua 5.4.8: 0x1.147f2b1ca3ce6p+50 ^ 2.0 = 0x1.2aa274218ee22p+100, x * x = 0x1.2aa274218ee22p+100, glibc pow = 0x1.2aa274218ee23p+100
+Lua 5.4.8: 0x1.ca64cad798b28p+455 ^ 2.0 = 0x1.9a6666bd43c37p+911, x * x = 0x1.9a6666bd43c37p+911, glibc pow = 0x1.9a6666bd43c38p+911
+Lua 5.4.8: -0x1.40d7ca69d96aap-398 ^ 2.0 = 0x1.921c2fee3d60fp-796, x * x = 0x1.921c2fee3d60fp-796, glibc pow = 0x1.921c2fee3d61p-796
+Lua 5.4.8: 0x1.52c592617c7f4p-311 ^ 2.0 = 0x1.c04e4f040a7cfp-622, x * x = 0x1.c04e4f040a7cfp-622, glibc pow = 0x1.c04e4f040a7dp-622
+Lua 5.4.8: math.atan(-0x1.7646033488cefp-4) = -0x1.753caceec8a1ap-4, glibc atan = -0x1.753caceec8a1bp-4, atan2(x, 1) = -0x1.753caceec8a1ap-4
+Lua 5.4.8: math.atan(-0x1.b896936efd04p-4) = -0x1.b6e6901eee58p-4, glibc atan = -0x1.b6e6901eee581p-4, atan2(x, 1) = -0x1.b6e6901eee58p-4
+Lua 5.4.8: math.atan(0x1.37b8b32a0e9ebp-4) = 0x1.371f2b7809b08p-4, glibc atan = 0x1.371f2b7809b09p-4, atan2(x, 1) = 0x1.371f2b7809b08p-4
+Lua 5.4.8: math.atan(-0x1.bc0106ba54b56p-3) = -0x1.b53ccd7ff155p-3, glibc atan = -0x1.b53ccd7ff1551p-3, atan2(x, 1) = -0x1.b53ccd7ff155p-3
+Lua 5.4.8: math.atan(0x1.47cb5e7ee243ep-4) = 0x1.4718e8ef211eap-4, glibc atan = 0x1.4718e8ef211e9p-4, atan2(x, 1) = 0x1.4718e8ef211eap-4
